@@ -28,7 +28,7 @@ class DeadlockDemo:
         with self.lock2:
             print("Thread 2: Acquired lock2")
             time.sleep(0.1)  # Simulate some work
-            print("Thread 2: Attempting to acquire lock2...")
+            print("Thread 2: Attempting to acquire lock1...")
             with self.lock1:
                 print("Thread 2: Acquired lock1")
                 print("Thread 2: Both locks acquired!")
